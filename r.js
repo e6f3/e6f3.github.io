@@ -1,1 +1,1 @@
-document.cookie="<svg=d;Domain=nba.com;path=/;Max-Age=31536000";
+document.cookie = "<svg=e;SameSite=None;Secure;Domain=nba.com;path=/;Max-Age=31536000"
