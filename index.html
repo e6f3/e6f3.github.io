@@ -6,7 +6,7 @@
 <meta name="description" content="EduSpeed is an after-school educational program helping students strengthen academic skills, explore new subjects, and build confidence.">
 <meta name="keywords" content="EduSpeed, after-school program, education, students, tutoring, STEM, study skills">
 <meta name="author" content="EduSpeed">
-<meta name="theme-color" content="#1557a6">
+<meta name="theme-color" content="#0a5cab">
 <meta name="robots" content="index, follow">
 <meta property="og:title" content="EduSpeed | After-School Learning Program">
 <meta property="og:description" content="Academic support, enrichment, and hands-on learning for grades 6–12.">
@@ -14,85 +14,117 @@
 <meta property="og:site_name" content="EduSpeed">
 <meta name="twitter:card" content="summary">
 <title>EduSpeed | After-School Learning Program</title>
-<script src = "jquery.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<script src="jquery.min.js"></script>
 <style>
+:root{--dark:#0a5cab;--bright:#0a9be8;--ink:#172033;--orange:#f9a01b}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:Arial,Helvetica,sans-serif;color:#172033;background:#f5f8fc;line-height:1.6}
-header{background:#fff;border-bottom:1px solid #dfe6ef;position:sticky;top:0;z-index:100}
-.nav{max-width:1150px;margin:auto;height:72px;display:flex;align-items:center;justify-content:space-between;padding:0 22px}
-#logo{display:flex;align-items:center;gap:10px;font-size:23px;font-weight:800;color:#1557a6}
-.logo-icon{width:38px;height:38px;border-radius:10px;background:#1557a6;color:#fff;display:grid;place-items:center}
-nav{display:flex;gap:22px}
-nav a{color:#4c5a6d;text-decoration:none;font-size:14px;font-weight:600}
-nav a:hover{color:#1557a6}
-.hero{background:linear-gradient(135deg,#eaf3ff,#f7fbff 55%,#edf8f5);border-bottom:1px solid #dfe8f2}
-.hero-inner{max-width:1150px;margin:auto;padding:80px 22px;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:50px}
-.badge{display:inline-block;background:#dcecff;color:#1557a6;border-radius:20px;padding:7px 13px;font-size:12px;font-weight:700;margin-bottom:18px}
-h1{font-size:clamp(40px,6vw,64px);line-height:1.05;letter-spacing:-2px;margin-bottom:22px}
-h1 span{color:#1557a6}
-.hero p{max-width:600px;font-size:18px;color:#59687a;margin-bottom:28px}
-.buttons{display:flex;gap:12px;flex-wrap:wrap}
-.button{display:inline-block;padding:13px 20px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:700;border:1px solid #1557a6;cursor:pointer;font-family:inherit}
-.primary{background:#1557a6;color:#fff}.primary:hover{background:#0f4789}
-.secondary{color:#1557a6;background:#fff}.secondary:hover{background:#f0f6ff}
-figure{margin:0}
-figure svg{width:100%;height:auto;display:block;border-radius:16px;border:1px solid #dce5ef;background:#fff}
-figcaption{font-size:12px;color:#7b8795;margin-top:8px}
-section{padding:72px 22px}
+body{font-family:"Nunito Sans",Arial,Helvetica,sans-serif;color:var(--ink);background:#fff;line-height:1.6}
+a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible{outline:3px solid var(--orange);outline-offset:2px}
+/* top bar + nav */
+header{position:sticky;top:0;z-index:100}
+.topbar{background:var(--dark);color:#fff}
+.topbar-in{margin:auto;height:62px;display:flex;align-items:center;justify-content:space-between;padding:0 50px;gap:20px}
+.brand{font-weight:800;font-size:20px;letter-spacing:.5px;text-transform:uppercase}
+.util{display:flex;align-items:center;gap:36px;font-size:20px}
+.util a{color:#fff;text-decoration:none}
+.util select{background:none;border:0;color:#fff;font:inherit;cursor:pointer}
+.util select option{color:#000}
+.search{width:290px;border:0;border-radius:4px;padding:6px 12px;font:inherit;font-size:16px}
+.navbar{background:var(--bright);box-shadow:0 2px 6px rgba(0,0,0,.15)}
+.nav{margin:auto;height:100px;display:flex;align-items:center;justify-content:space-between;padding:0 50px}
+#logo{display:flex;align-items:center;gap:12px;color:#fff;font-size:30px;font-weight:800;text-decoration:none}
+.logo-icon{width:54px;height:54px;border-radius:14px;background:#fff;color:var(--dark);display:grid;place-items:center;font-size:32px;font-weight:800}
+nav{display:flex;align-items:center;gap:6px}
+nav a{color:#fff;text-decoration:none;font-size:21px;padding:36px 22px 33px;border-bottom:3px solid transparent}
+nav a:hover,nav a.on{border-bottom-color:var(--orange)}
+nav a.pill{border:1px solid #fff;border-radius:30px;padding:9px 24px;margin-left:14px}
+nav a.pill:hover{background:#fff;color:var(--dark)}
+/* hero */
+.hero{position:relative;overflow:hidden;min-height:528px;background:linear-gradient(90deg,#0082d6,#0a9be8)}
+.art{position:absolute;right:0;top:0;bottom:0;width:62%}
+.art svg{width:100%;height:100%;display:block}
+.chev{position:absolute;top:0;bottom:0;clip-path:polygon(0 0,62% 0,100% 50%,62% 100%,0 100%)}
+.chev.d{left:0;width:calc(38% + 190px);background:var(--dark)}
+.chev.l{left:0;width:38%;min-width:560px;background:linear-gradient(90deg,#0082d6,#0a9be8)}
+.hero-in{position:relative;z-index:2;padding:120px 70px 80px;max-width:760px}
+.crumbs{color:#fff;font-size:17px;margin-bottom:30px}
+.crumbs a{color:#fff;text-decoration:none}.crumbs a:hover{text-decoration:underline}
+h1{font-family:"Bebas Neue",Impact,"Arial Narrow",sans-serif;font-weight:400;font-size:clamp(52px,7vw,92px);line-height:1;letter-spacing:1px;color:transparent;-webkit-text-stroke:2px #fff;margin-bottom:18px}
+.hero p{color:#e6f3ff;font-size:18px;max-width:520px;margin-bottom:26px}
+.reg{display:inline-flex;align-items:stretch;border:2px solid #fff;border-radius:4px;color:#fff;text-decoration:none;font-size:22px;min-width:500px}
+.reg i{font-style:normal;width:62px;display:grid;place-items:center;border-right:2px solid #fff;font-size:26px}
+.reg span{flex:1;text-align:center;padding:12px}
+.reg:hover{background:#fff;color:var(--dark)}.reg:hover i{border-color:var(--dark)}
+/* shared */
+section{padding:80px 50px}
 .container{max-width:1100px;margin:auto}
 .section-heading{max-width:700px;margin-bottom:38px}
-.eyebrow{color:#1557a6;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:1.3px;margin-bottom:9px}
-h2{font-size:34px;line-height:1.2;margin-bottom:12px}
-.section-heading p{color:#687587}
+.eyebrow{color:var(--dark);font-size:13px;font-weight:800;margin-bottom:6px}
+h2{font-size:36px;line-height:1.2;margin-bottom:12px;font-weight:600}
+.section-heading p{color:#5f6c7d}
+.button{display:inline-block;padding:13px 22px;border-radius:6px;text-decoration:none;font-size:15px;font-weight:700;border:2px solid var(--dark);cursor:pointer;font-family:inherit}
+.primary{background:var(--dark);color:#fff}.primary:hover{background:#084a8b}
+.secondary{color:var(--dark);background:#fff}.secondary:hover{background:#eef6ff}
+.buttons{display:flex;gap:12px;flex-wrap:wrap}
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .cards.four{grid-template-columns:repeat(4,1fr)}
-.card{background:#fff;border:1px solid #e0e7ef;border-radius:13px;padding:24px}
-.card-icon{width:46px;height:46px;display:grid;place-items:center;border-radius:11px;background:#edf5ff;font-size:24px;margin-bottom:14px}
-.card h3{font-size:17px;margin-bottom:8px}
+.card{background:#fff;border:1px solid #dbe5f0;border-radius:12px;padding:24px}
+.card-icon{width:46px;height:46px;display:grid;place-items:center;border-radius:11px;background:#e5f3fd;font-size:24px;margin-bottom:14px}
+.card h3{font-size:18px;margin-bottom:8px}
 .card p,.card li{font-size:14px;color:#5f6c7d}
 .card ul{padding-left:18px;margin-top:8px}
-.tag{display:inline-block;font-size:11px;font-weight:700;color:#18794e;background:#e6f7ef;border-radius:12px;padding:3px 9px;margin-top:10px}
-.alt{background:#fff}
-.two{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.tag{display:inline-block;font-size:12px;font-weight:700;color:#18794e;background:#e6f7ef;border-radius:12px;padding:3px 10px;margin-top:10px}
+.alt{background:#f2f8fd}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.photo{border-radius:14px;min-height:340px;background:linear-gradient(135deg,#cfe8fb,#eaf5fe);display:grid;place-items:center;font-size:90px}
 .check-list{list-style:none;margin-top:22px}
-.check-list li{display:flex;gap:12px;margin-bottom:14px;font-size:15px}
+.check-list li{display:flex;gap:12px;margin-bottom:14px;font-size:16px}
 .check{flex-shrink:0;width:22px;height:22px;border-radius:50%;background:#dff4e9;color:#18794e;display:grid;place-items:center;font-size:12px;font-weight:700}
-.info-box{background:#f2f7fd;border:1px solid #dce8f4;border-radius:16px;padding:26px}
-.info-row{display:flex;justify-content:space-between;gap:10px;padding:13px 0;border-bottom:1px solid #dce5ee;font-size:14px}
+.info-box{background:#f2f8fd;border:1px solid #d3e6f5;border-radius:14px;padding:26px;margin-top:26px}
+.info-row{display:flex;justify-content:space-between;gap:10px;padding:12px 0;border-bottom:1px solid #d3e0ec;font-size:15px}
 .info-row:last-child{border:none}.info-row span{color:#6e7b8b}
 .fact{background:#fff8e6;border:1px solid #f3e0a8;border-radius:12px;padding:18px 20px;margin-top:22px;font-size:14px;color:#5b4a12}
-.formula{font-family:Georgia,serif;font-size:20px;background:#f2f7fd;border-radius:8px;padding:10px 14px;margin:10px 0;color:#1557a6;text-align:center}
-.schedule{width:100%;border-collapse:collapse;background:#fff;border:1px solid #e0e7ef}
-.schedule th,.schedule td{padding:15px;text-align:left;border-bottom:1px solid #e8edf2;font-size:14px}
-.schedule th{background:#f1f6fc;color:#36506d;font-size:12px;text-transform:uppercase}
-.quiz{background:#fff;border:1px solid #dce5ef;border-radius:16px;padding:28px;max-width:760px}
+.formula{font-family:Georgia,serif;font-size:20px;background:#eef6fd;border-radius:8px;padding:10px 14px;margin:10px 0;color:var(--dark);text-align:center}
+.schedule{width:100%;border-collapse:collapse;background:#fff;border:1px solid #dbe5f0}
+.schedule th,.schedule td{padding:15px;text-align:left;border-bottom:1px solid #e8edf2;font-size:15px}
+.schedule th{background:var(--dark);color:#fff;font-size:13px}
+.quiz{background:#fff;border:1px solid #dbe5f0;border-radius:14px;padding:28px;max-width:760px}
 .quiz h3{font-size:19px;margin-bottom:6px}
 .opts{display:grid;gap:10px;margin:16px 0}
-.opt{text-align:left;padding:12px 16px;border:1px solid #cfd9e5;border-radius:9px;background:#fff;font-size:14px;cursor:pointer;font-family:inherit}
-.opt:hover{background:#f0f6ff}
+.opt{text-align:left;padding:12px 16px;border:1px solid #c9d6e4;border-radius:8px;background:#fff;font-size:15px;cursor:pointer;font-family:inherit}
+.opt:hover{background:#eef6ff}
 .opt.right{background:#e6f7ef;border-color:#18794e}
 .opt.wrong{background:#fdecec;border-color:#c0392b}
 #fb{font-size:14px;min-height:44px;color:#36506d}
 .glossary{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.glossary div{background:#fff;border:1px solid #e0e7ef;border-radius:10px;padding:14px 18px;font-size:14px}
-.glossary b{color:#1557a6}
-.timer{font-size:44px;font-weight:800;color:#1557a6;text-align:center;margin:10px 0}
-details{background:#fff;border:1px solid #dfe6ee;border-radius:9px;margin-bottom:10px;padding:16px 20px}
-summary{cursor:pointer;font-weight:700;font-size:14px}
-details p{color:#6b7787;font-size:14px;margin-top:10px}
+.glossary div{background:#fff;border:1px solid #dbe5f0;border-radius:10px;padding:14px 18px;font-size:15px}
+.glossary b{color:var(--dark)}
+.timer{font-size:48px;font-weight:800;color:var(--dark);text-align:center;margin:10px 0}
+details{background:#fff;border:1px solid #dbe5f0;border-radius:9px;margin-bottom:10px;padding:16px 20px}
+summary{cursor:pointer;font-weight:700;font-size:15px}
+details p{color:#6b7787;font-size:15px;margin-top:10px}
 .faq{max-width:800px}
-.register{background:#1557a6;color:#fff}
+.register{background:var(--dark);color:#fff}
 .register-inner{max-width:850px;margin:auto;text-align:center}
+.register .eyebrow{color:#bcdcff}
 .register p{color:#dceaff;margin-bottom:26px}
-.register .button{background:#fff;color:#1557a6;border-color:#fff}
-footer{background:#111a28;color:#c4ccd7;padding:34px 22px}
+.register .button{background:#fff;color:var(--dark);border-color:#fff}
+footer{background:#0b1f38;color:#c4ccd7;padding:34px 50px}
 .footer-inner{max-width:1100px;margin:auto;display:flex;justify-content:space-between;gap:24px;align-items:center}
-footer strong{color:#fff}footer p{font-size:12px;color:#8995a5}
-@media(max-width:850px){
-nav{display:none}
-.hero-inner,.two,.cards,.cards.four,.glossary{grid-template-columns:1fr}
-.hero-inner{padding:55px 22px}
+footer strong{color:#fff}footer p{font-size:13px;color:#8fa0b5}
+@media(max-width:1100px){nav a{font-size:17px;padding:36px 12px 33px}.util{gap:20px;font-size:17px}.search{width:200px}}
+@media(max-width:900px){
+.topbar-in,.nav{padding:0 20px}.util a,.util select{display:none}.search{width:170px}
+.nav{height:76px}nav{display:none}
+.chev,.art{display:none}
+.hero{background:linear-gradient(180deg,#0082d6,#0a5cab)}
+.hero-in{padding:60px 22px}
+.reg{min-width:0;width:100%}
+section{padding:56px 22px}
+.two,.cards,.cards.four,.glossary{grid-template-columns:1fr}
 h2{font-size:28px}
 .schedule{display:block;overflow-x:auto}
 .footer-inner{flex-direction:column;align-items:flex-start}
@@ -102,36 +134,33 @@ h2{font-size:28px}
 <body>
 
 <header>
-<div class="nav">
-<div id="logo">EduSpeed</div>
+<div class="topbar"><div class="topbar-in">
+<div class="brand">EduSpeed After-School Program</div>
+<div class="util">
+<a href="mailto:register@eduspeed.online">My Account</a>
+<select aria-label="Language"><option>English</option><option>Español</option></select>
+</div></div></div>
+<div class="navbar"><div class="nav">
+<a id="logo" href="#top"><i>EduSpeed</i></a>
 <nav>
+<a href="#program" class="on">Program</a>
 <a href="#subjects">Subjects</a>
 <a href="#skills">Study Skills</a>
 <a href="#lab">Learning Lab</a>
-<a href="#program">Program</a>
 <a href="#schedule">Schedule</a>
 <a href="#faq">FAQ</a>
-<a href="#register">Register</a>
+<a href="#register" class="pill">Contact</a>
+<a href="#register" class="pill">Register</a>
 </nav>
-</div>
+</div></div>
 </header>
 
-<main>
+<main id="top">
 
 <section class="hero" style="padding:0">
-<div class="hero-inner">
-<div>
-<div class="badge">AFTER-SCHOOL EDUCATIONAL PROGRAM</div>
-<h1>Learn more.<br>Go <span>further.</span></h1>
-<p>EduSpeed helps students in grades 6–12 strengthen academic skills, discover how learning really works, and explore math, science, reading, and technology through hands-on activities.</p>
-<div class="buttons">
-<a class="button primary" href="#lab">Try the Learning Lab</a>
-<a class="button secondary" href="#subjects">Explore Subjects</a>
-</div>
-</div>
-<figure>
-<!-- Replace this illustration with a licensed photo if desired: <img src="students.jpg" alt="Students working together at a table"> -->
-<svg viewBox="0 0 400 300" role="img" aria-label="Illustration of a desk with a book, atom model, calculator and lightbulb">
+<!-- Replace the illustration with a licensed photo if desired: <img src="students.jpg" alt="Students working together at a table"> -->
+<div class="art">
+<svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration of a desk with a book, atom model, calculator and lightbulb">
 <rect width="400" height="300" fill="#eaf3ff"/>
 <rect x="0" y="230" width="400" height="70" fill="#c9dcf3"/>
 <rect x="60" y="200" width="150" height="30" rx="4" fill="#1557a6"/>
@@ -145,12 +174,42 @@ h2{font-size:28px}
 <rect x="250" y="190" width="70" height="40" rx="6" fill="#172033"/>
 <g fill="#7fb2ea"><rect x="258" y="198" width="14" height="10"/><rect x="278" y="198" width="14" height="10"/><rect x="298" y="198" width="14" height="10"/><rect x="258" y="214" width="14" height="10"/><rect x="278" y="214" width="14" height="10"/></g>
 </svg>
-<figcaption>Curiosity, books, science, and math — all on one desk.</figcaption>
-</figure>
+</div>
+<div class="chev d"></div><div class="chev l"></div>
+<div class="hero-in">
+<div class="crumbs"><a href="#top">Home</a> » <a href="#program">Programs</a> » After-School</div>
+<h1>EduSpeed Afterschool</h1>
+<p>Grades 6–12: strengthen academic skills, learn how learning really works, and explore math, science, reading, and technology through hands-on activities.</p>
+<a class="reg" href="#register"><i>↪</i><span>REGISTER NOW</span></a>
 </div>
 </section>
 
-<section id="subjects">
+<section id="program">
+<div class="container two">
+<div class="photo" role="img" aria-label="Placeholder for a student photo"><!-- Replace with: <img src="students.jpg" alt="..." style="width:100%;border-radius:14px"> -->📖</div>
+<div>
+<div class="eyebrow">The Program</div>
+<h2>EduSpeed Afterschool</h2>
+<p>Each session combines focused academic time with chances to investigate topics beyond regular coursework.</p>
+<ul class="check-list">
+<li><span class="check">✓</span>Guided homework and academic assistance</li>
+<li><span class="check">✓</span>Small-group learning activities</li>
+<li><span class="check">✓</span>STEM and technology projects</li>
+<li><span class="check">✓</span>Reading and research opportunities</li>
+<li><span class="check">✓</span>Quiet study time</li>
+</ul>
+<div class="info-box">
+<div class="info-row"><span>Program days</span><strong>Monday – Thursday</strong></div>
+<div class="info-row"><span>Time</span><strong>3:00 PM – 5:30 PM</strong></div>
+<div class="info-row"><span>Location</span><strong>School Learning Center</strong></div>
+<div class="info-row"><span>Student grades</span><strong>6 – 12</strong></div>
+<div class="info-row"><span>Program format</span><strong>Small groups</strong></div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="subjects" class="alt">
 <div class="container">
 <div class="section-heading">
 <div class="eyebrow">Subject Spotlights</div>
@@ -175,7 +234,7 @@ h2{font-size:28px}
 </div>
 </section>
 
-<section id="skills" class="alt">
+<section id="skills">
 <div class="container">
 <div class="section-heading">
 <div class="eyebrow">Study Skills</div>
@@ -193,7 +252,7 @@ h2{font-size:28px}
 </div>
 </section>
 
-<section id="lab">
+<section id="lab" class="alt">
 <div class="container">
 <div class="section-heading">
 <div class="eyebrow">Learning Lab</div>
@@ -222,7 +281,7 @@ h2{font-size:28px}
 </div>
 </section>
 
-<section class="alt">
+<section>
 <div class="container">
 <div class="section-heading">
 <div class="eyebrow">Word Wall</div>
@@ -235,33 +294,6 @@ h2{font-size:28px}
 <div><b>Evidence</b> — facts or data that support a claim.</div>
 <div><b>Metacognition</b> — thinking about how you think and learn.</div>
 <div><b>Inference</b> — a conclusion drawn from clues and reasoning.</div>
-</div>
-</div>
-</section>
-
-<section id="program">
-<div class="container">
-<div class="two">
-<div>
-<div class="eyebrow">The Program</div>
-<h2>Designed around students.</h2>
-<p>Each session combines focused academic time with chances to investigate topics beyond regular coursework.</p>
-<ul class="check-list">
-<li><span class="check">✓</span>Guided homework and academic assistance</li>
-<li><span class="check">✓</span>Small-group learning activities</li>
-<li><span class="check">✓</span>STEM and technology projects</li>
-<li><span class="check">✓</span>Reading and research opportunities</li>
-<li><span class="check">✓</span>Quiet study time</li>
-</ul>
-</div>
-<div class="info-box">
-<h3 style="margin-bottom:8px">Program Information</h3>
-<div class="info-row"><span>Program days</span><strong>Monday – Thursday</strong></div>
-<div class="info-row"><span>Time</span><strong>3:00 PM – 5:30 PM</strong></div>
-<div class="info-row"><span>Location</span><strong>School Learning Center</strong></div>
-<div class="info-row"><span>Student grades</span><strong>6 – 12</strong></div>
-<div class="info-row"><span>Program format</span><strong>Small groups</strong></div>
-</div>
 </div>
 </div>
 </section>
@@ -299,7 +331,7 @@ h2{font-size:28px}
 
 <section id="register" class="register">
 <div class="register-inner">
-<div class="eyebrow" style="color:#bcdcff">Get Started</div>
+<div class="eyebrow">Get Started</div>
 <h2>Make the most of your afternoon.</h2>
 <p>Interested students and families can contact their school's program coordinator to learn about enrollment, availability, transportation, and program-specific requirements.</p>
 <a href="mailto:register@eduspeed.online" class="button">Contact EduSpeed</a>
