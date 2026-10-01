@@ -44,7 +44,8 @@ nav a.pill{border:1px solid #fff;border-radius:30px;padding:9px 24px;margin-left
 nav a.pill:hover{background:#fff;color:var(--dark)}
 /* hero */
 .hero{position:relative;overflow:hidden;min-height:528px;background:linear-gradient(90deg,#0082d6,#0a9be8)}
-.art{position:absolute;right:0;top:0;bottom:0;width:62%}
+.art{width:100%;height:100%;position:absolute;right:0;top:0;bottom:0;width:62%}
+.art img {width:100%;height:100%;object-fit: cover;}
 .art svg{width:100%;height:100%;display:block}
 .chev{position:absolute;top:0;bottom:0;clip-path:polygon(0 0,62% 0,100% 50%,62% 100%,0 100%)}
 .chev.d{left:0;width:calc(38% + 190px);background:var(--dark)}
@@ -79,7 +80,19 @@ h2{font-size:36px;line-height:1.2;margin-bottom:12px;font-weight:600}
 .tag{display:inline-block;font-size:12px;font-weight:700;color:#18794e;background:#e6f7ef;border-radius:12px;padding:3px 10px;margin-top:10px}
 .alt{background:#f2f8fd}
 .two{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
-.photo{border-radius:14px;min-height:340px;background:linear-gradient(135deg,#cfe8fb,#eaf5fe);display:grid;place-items:center;font-size:90px}
+.photo {
+  border-radius: 14px;
+  height: 400px;
+  display: grid;
+  place-items: center;
+  align-items: center;
+}
+
+.photo img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
 .check-list{list-style:none;margin-top:22px}
 .check-list li{display:flex;gap:12px;margin-bottom:14px;font-size:16px}
 .check{flex-shrink:0;width:22px;height:22px;border-radius:50%;background:#dff4e9;color:#18794e;display:grid;place-items:center;font-size:12px;font-weight:700}
@@ -138,7 +151,7 @@ h2{font-size:28px}
 <div class="brand">EduSpeed After-School Program</div>
 <div class="util">
 <a href="mailto:register@eduspeed.online">My Account</a>
-<select aria-label="Language"><option>English</option><option>Español</option></select>
+
 </div></div></div>
 <div class="navbar"><div class="nav">
 <a id="logo" href="#top"><i>EduSpeed</i></a>
@@ -158,22 +171,9 @@ h2{font-size:28px}
 <main id="top">
 
 <section class="hero" style="padding:0">
-<!-- Replace the illustration with a licensed photo if desired: <img src="students.jpg" alt="Students working together at a table"> -->
+
 <div class="art">
-<svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration of a desk with a book, atom model, calculator and lightbulb">
-<rect width="400" height="300" fill="#eaf3ff"/>
-<rect x="0" y="230" width="400" height="70" fill="#c9dcf3"/>
-<rect x="60" y="200" width="150" height="30" rx="4" fill="#1557a6"/>
-<rect x="66" y="184" width="138" height="16" rx="3" fill="#2879d2"/>
-<rect x="72" y="170" width="126" height="14" rx="3" fill="#7fb2ea"/>
-<g transform="translate(300 120)" fill="none" stroke="#18794e" stroke-width="3">
-<ellipse rx="52" ry="20"/><ellipse rx="52" ry="20" transform="rotate(60)"/><ellipse rx="52" ry="20" transform="rotate(120)"/>
-<circle r="8" fill="#18794e"/></g>
-<g transform="translate(120 90)"><circle r="34" fill="#ffd45e"/><rect x="-12" y="30" width="24" height="16" rx="3" fill="#6b7787"/>
-<path d="M-8 -6 L0 10 L8 -6" stroke="#b8860b" stroke-width="3" fill="none"/></g>
-<rect x="250" y="190" width="70" height="40" rx="6" fill="#172033"/>
-<g fill="#7fb2ea"><rect x="258" y="198" width="14" height="10"/><rect x="278" y="198" width="14" height="10"/><rect x="298" y="198" width="14" height="10"/><rect x="258" y="214" width="14" height="10"/><rect x="278" y="214" width="14" height="10"/></g>
-</svg>
+<img src = "1.jpg">
 </div>
 <div class="chev d"></div><div class="chev l"></div>
 <div class="hero-in">
@@ -186,7 +186,8 @@ h2{font-size:28px}
 
 <section id="program">
 <div class="container two">
-<div class="photo" role="img" aria-label="Placeholder for a student photo"><!-- Replace with: <img src="students.jpg" alt="..." style="width:100%;border-radius:14px"> -->📖</div>
+<div class="photo" role="img"><img src = "2.jpg"></div>
+
 <div>
 <div class="eyebrow">The Program</div>
 <h2>EduSpeed Afterschool</h2>
@@ -213,24 +214,24 @@ h2{font-size:28px}
 <div class="container">
 <div class="section-heading">
 <div class="eyebrow">Subject Spotlights</div>
-<h2>Bite-sized lessons from every EduSpeed subject.</h2>
-<p>Each week students dig into a big idea. Here is a taste of what we explore.</p>
+<h2>A collection of lessons from every EduSpeed subject.</h2>
+<p>Each week students dig into a big idea. Here's a sneak peak of what we explore.</p>
 </div>
 <div class="cards four">
-<div class="card"><div class="card-icon">➗</div><h3>Mathematics</h3>
+<div class="card"><h3>Mathematics</h3>
 <p>Math is the language of patterns. The Pythagorean theorem links the sides of any right triangle:</p>
 <div class="formula">a² + b² = c²</div>
-<p>3² + 4² = 9 + 16 = 25 = 5²</p><span class="tag">Grades 6–12</span></div>
-<div class="card"><div class="card-icon">🔬</div><h3>Science</h3>
+<p>3² + 4² = 9 + 16 = 25 = 5²</p></div>
+<div class="card"><h3>Science</h3>
 <p>The scientific method turns questions into knowledge:</p>
-<ul><li>Ask a question</li><li>Form a hypothesis</li><li>Run an experiment</li><li>Analyze the data</li><li>Share conclusions</li></ul><span class="tag">Hands-on labs</span></div>
-<div class="card"><div class="card-icon">📚</div><h3>Reading &amp; Writing</h3>
-<p>Strong readers ask questions while they read. We practice the “SQ3R” method: Survey, Question, Read, Recite, Review — then write a claim supported by evidence from the text.</p><span class="tag">Critical thinking</span></div>
-<div class="card"><div class="card-icon">💻</div><h3>Technology</h3>
+<ul><li>Ask a question</li><li>Form a hypothesis</li><li>Run an experiment</li><li>Analyze the data</li><li>Share conclusions</li></ul></div>
+<div class="card"><h3>Reading &amp; Writing</h3>
+<p>Strong readers ask questions while they read. We practice the “SQ3R” method: Survey, Question, Read, Recite, Review — then write a claim supported by evidence from the text.</p></div>
+<div class="card"><h3>Technology</h3>
 <p>Computers follow instructions called algorithms. Students learn to break a big problem into small steps — a skill called decomposition.</p>
-<div class="formula">Input → Process → Output</div><span class="tag">Coding &amp; logic</span></div>
+<div class="formula">Input → Process → Output</div></div>
 </div>
-<div class="fact"><b>Did you know?</b> Your brain forms new connections every time you practice a hard skill. Scientists call this <i>neuroplasticity</i> — it is why effort, not just talent, builds ability.</div>
+
 </div>
 </section>
 
@@ -242,12 +243,12 @@ h2{font-size:28px}
 <p>These research-backed strategies are taught and practiced in every session.</p>
 </div>
 <div class="cards">
-<div class="card"><div class="card-icon">🔁</div><h3>Spaced Repetition</h3><p>Reviewing material over several days beats one long cram session. Try reviewing after 1 day, 3 days, and 1 week to move knowledge into long-term memory.</p></div>
-<div class="card"><div class="card-icon">🧠</div><h3>Active Recall</h3><p>Close the book and test yourself. Retrieving information from memory strengthens it far more than re-reading does.</p></div>
-<div class="card"><div class="card-icon">🗣️</div><h3>The Feynman Technique</h3><p>Explain a topic in simple words as if teaching a younger student. Any place you get stuck shows exactly what to study next.</p></div>
-<div class="card"><div class="card-icon">📝</div><h3>Cornell Notes</h3><p>Divide the page into cues, notes, and a summary. Writing questions in the margin turns notes into a ready-made study guide.</p></div>
-<div class="card"><div class="card-icon">⏱️</div><h3>Pomodoro Focus</h3><p>Work for 25 focused minutes, then rest for 5. Short sprints protect attention and make big tasks feel manageable.</p></div>
-<div class="card"><div class="card-icon">🌱</div><h3>Growth Mindset</h3><p>“I can’t do this <i>yet</i>.” Viewing mistakes as feedback helps students persist through challenges and improve over time.</p></div>
+<div class="card"><h3>Spaced Repetition</h3><p>Reviewing material over several days beats one long cram session. Try reviewing after 1 day, 3 days, and 1 week to move knowledge into long-term memory.</p></div>
+<div class="card"><h3>Active Recall</h3><p>Close the book and test yourself. Retrieving information from memory strengthens it far more than re-reading does.</p></div>
+<div class="card"><h3>The Feynman Technique</h3><p>Explain a topic in simple words as if teaching a younger student. Any place you get stuck shows exactly what to study next.</p></div>
+<div class="card"><h3>Cornell Notes</h3><p>Divide the page into cues, notes, and a summary. Writing questions in the margin turns notes into a ready-made study guide.</p></div>
+<div class="card"><h3>Pomodoro Focus</h3><p>Work for 25 focused minutes, then rest for 5. Short sprints protect attention and make big tasks feel manageable.</p></div>
+<div class="card"><h3>Growth Mindset</h3><p>“I can’t do this <i>yet</i>.” Viewing mistakes as feedback helps students persist through challenges and improve over time.</p></div>
 </div>
 </div>
 </section>
